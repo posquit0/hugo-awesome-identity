@@ -1,0 +1,7 @@
+{{ with .Site.Params.actions -}}
+<section class="actions">
+  {{ range . }}
+  <a class="action" href="{{ .url }}">{{ .name }}</a>
+  {{ end }}
+</section>
+{{- end }}

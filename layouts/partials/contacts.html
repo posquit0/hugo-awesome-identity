@@ -1,0 +1,43 @@
+{{ with .Site.Params.contacts -}}
+<section class="contacts">
+  {{- range $service, $id := . -}}
+    {{- if (eq $service "github") }}
+  <a class="contact" href="https://github.com/{{ $id }}">
+    <i class="fab fa-github" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "twitter") }}
+  <a class="contact" href="https://twitter.com/{{ $id }}">
+    <i class="fab fa-twitter" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "facebook") }}
+  <a class="contact" href="https://facebook.com/{{ $id }}">
+    <i class="fab fa-facebook" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "linkedin") }}
+  <a class="contact" href="https://linkedin.com/in/{{ $id }}">
+    <i class="fab fa-linkedin" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "instagram") }}
+  <a class="contact" href="https://instagram.com/{{ $id }}">
+    <i class="fab fa-instagram" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "stackoverflow") }}
+  <a class="contact" href="https://stackoverflow.com/users/{{ $id }}">
+    <i class="fab fa-stack-overflow" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "medium") }}
+  <a class="contact" href="https://medium.com/{{ $id }}">
+    <i class="fab fa-medium" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "email") }}
+  <a class="contact" href="mailto:{{ $id }}">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+  </a>
+    {{- else if (eq $service "keybase") }}
+  <a class="contact" href="https://keybase.io/{{ $id }}">
+    <i class="fab fa-keybase" aria-hidden="true"></i>
+  </a>
+    {{- end }}
+  {{- end }}
+</section>
+{{- end }}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{{ partial "opengraph.html" . }}
+{{ with .Site.Params.meta.description }}
+    <meta name="description" content="{{ . }}" />
+{{ end }}
+{{ with .Site.Params.meta.keywords }}
+    <meta name="keywords" content="{{ . }}" />
+{{ end }}
+    <base href="{{ .Site.BaseURL }}">
+    <title>{{ .Site.Title }}</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura:400,700">
+
+{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+{{ $style := resources.Get "sass/main.scss" | toCSS $options | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <!-- <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body>
+    <div class="wrap">
+{{ partial "profile.html" . }}
+{{ partial "contacts.html" . }}
+{{ partial "actions.html" . }}
+{{ partial "footer.html" . }}
+    </div>
+{{ template "_internal/google_analytics_async.html" . }}
+  </body>
+</html>
