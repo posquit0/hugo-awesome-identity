@@ -1,0 +1,93 @@
+.profile {
+  text-align: center;
+
+  .image {
+    position: relative;
+    max-width: 10rem;
+    margin: 0.6em auto;
+
+    .spinner {
+      width: 10rem;
+      height: 10rem;
+      border: 0.5em solid #3d3d3d;
+      border-right-color: rgb(182, 38, 44);
+      border-bottom-color: rgb(182, 38, 44);
+      border-radius: 50%;
+      -webkit-transition: transform 0.8s ease-in-out;
+      -moz-transition: transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+    }
+    &:hover .spinner {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    img {
+      position: absolute;
+      top: 0.5em;
+      bottom: 0;
+      left: 0.5em;
+      right: 0;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+  .name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.0rem;
+    margin: 0.2em auto;
+  }
+  .title {
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    color: rgb(182, 38, 44);
+    margin: 0.8em auto;
+  }
+  .bio {
+    font-size: 0.9rem;
+
+    p {
+      margin-top: 0.9em;
+    }
+    a:hover {
+      color: initial;
+    }
+  }
+
+  @media only screen and (min-width:720px) {
+    .image {
+      max-width: 11rem;
+
+      .spinner {
+        width: 11rem;
+        height: 11rem;
+      }
+    }
+    .name {
+      font-size: 2.4rem;
+    }
+    .title {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (min-width:1024px) {
+    .image {
+      max-width: 12rem;
+
+      .spinner {
+        width: 12rem;
+        height: 12rem;
+      }
+    }
+    .name {
+      font-size: 2.5rem;
+    }
+    .title {
+      font-size: 1.2rem;
+    }
+  }
+}

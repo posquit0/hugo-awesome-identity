@@ -1,0 +1,40 @@
+.actions {
+  margin: 3em auto;
+  text-align: center;
+  font-size: 1rem;
+
+  .action {
+    position: relative;
+    display: inline-block;
+    margin: 1.2em 1.2em;
+    width: 11em;
+    height: 2em;
+    line-height: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+
+    &:after {
+      content: "";
+      transition: 0.5s all ease;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+    }
+    &:after {
+      width: 100%;
+      height: 2px;
+      left: 50%;
+      bottom: -0.3em;
+      background: lighten(rgb(182, 38, 44), 10%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    &:hover:after {
+      width: 0;
+    }
+  }
+  .action:hover {
+    color: lighten(black, 40%);
+  }
+}

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Jura', sans-serif;
+  font-size: 1rem;
+}
+
+.wrap {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 5em;
+
+  @media only screen and (min-width:1024px) {
+    width: 1024px;
+  }
+}
+
+a {
+  color: rgb(182, 38, 44);
+  text-decoration: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+
+  &:visitied,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+::selection {
+  background-color: rgb(182, 38, 44);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: rgb(182, 38, 44);
+  color: white;
+}

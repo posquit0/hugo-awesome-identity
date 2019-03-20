@@ -1,0 +1,26 @@
+.contacts {
+  margin: 2.2rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+
+  .contact {
+    display: inline-block;
+    width: 2.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    background: #f9f9fb;
+    border-radius: 100%;
+    color: #535358;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .contact:hover {
+    background: rgb(182, 38, 44);
+    color: #fff;
+    box-shadow: 0 0 1px 7px rgba(182, 38, 44, 0.15);
+  }
+}
