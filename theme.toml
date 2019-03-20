@@ -1,0 +1,15 @@
+name = "Awesome Identity"
+license = "MIT"
+licenselink = "https://github.com/posquit0/hugo-awesome-identity/blob/master/LICENSE"
+description = "Awesome Identity Theme for Hugo"
+homepage = "https://github.com/posquit0/hugo-awesome-identity"
+tags = [
+  "aboutme", "awesome", "identity", "minimal",  "minimalist", "simple", "clean",
+  "responsive", "mobile", "one-page", "onepage", "light"
+]
+features = []
+min_version = "0.54"
+
+[author]
+  name = "Byungjin Park"
+  homepage = "https://www.posquit0.com"
