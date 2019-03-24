@@ -1,0 +1,25 @@
+{{ with .Site.Params.crisp -}}
+{{ if .websiteid -}}
+<script type="text/javascript">
+  window.$crisp=[];
+  window.CRISP_WEBSITE_ID="{{ .websiteid }}";
+
+  {{ with .color -}}
+  $crisp.push(["config", "color:theme", "{{ . }}"])
+  {{- end -}}
+  {{ with .reverseposition -}}
+  $crisp.push(["config", "position:reverse", {{ eq . true }}])
+  {{- end -}}
+  {{ with .hideonmobile -}}
+  $crisp.push(["config", "hide:on:mobile", {{ eq . true }}])
+  {{- end -}}
+  {{ with .hideonaway -}}
+  $crisp.push(["config", "hide:on:away", {{ eq . true }}])
+  {{- end -}}
+  {{ with .hidevacation -}}
+  $crisp.push(["config", "hide:vacation", {{ eq . true }}])
+  {{- end }}
+</script>
+<script async src="https://client.crisp.chat/l.js"></script>
+{{- end }}
+{{- end }}
