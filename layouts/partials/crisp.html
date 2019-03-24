@@ -1,3 +1,4 @@
+{{- $ga := .Site.GoogleAnalytics -}}
 {{ with .Site.Params.crisp -}}
 {{ if .websiteid -}}
 <script type="text/javascript">
@@ -5,19 +6,36 @@
   window.CRISP_WEBSITE_ID="{{ .websiteid }}";
 
   {{ with .color -}}
-  $crisp.push(["config", "color:theme", "{{ . }}"])
+  $crisp.push(["config", "color:theme", "{{ . }}"]);
   {{- end -}}
   {{ with .reverseposition -}}
-  $crisp.push(["config", "position:reverse", {{ eq . true }}])
+  $crisp.push(["config", "position:reverse", {{ eq . true }}]);
   {{- end -}}
   {{ with .hideonmobile -}}
-  $crisp.push(["config", "hide:on:mobile", {{ eq . true }}])
+  $crisp.push(["config", "hide:on:mobile", {{ eq . true }}]);
   {{- end -}}
   {{ with .hideonaway -}}
-  $crisp.push(["config", "hide:on:away", {{ eq . true }}])
+  $crisp.push(["config", "hide:on:away", {{ eq . true }}]);
   {{- end -}}
   {{ with .hidevacation -}}
-  $crisp.push(["config", "hide:vacation", {{ eq . true }}])
+  $crisp.push(["config", "hide:vacation", {{ eq . true }}]);
+  {{- end }}
+  {{ if $ga -}}
+  $crisp.push(["on", "chat:initiated", function() {
+    ga('send', 'event', 'Chat', 'Chat Initiated');
+  }]);
+  $crisp.push(["on", "chat:opened", function() {
+    ga('send', 'event', 'Chat', 'Chat Opened');
+  }]);
+  $crisp.push(["on", "chat:closed", function() {
+    ga('send', 'event', 'Chat', 'Chat Closed');
+  }]);
+  $crisp.push(["on", "message:sent", function() {
+    ga('send', 'event', 'Chat', 'Message Sent');
+  }]);
+  $crisp.push(["on", "message:received", function() {
+    ga('send', 'event', 'Chat', 'Message Received');
+  }]);
   {{- end }}
 </script>
 <script async src="https://client.crisp.chat/l.js"></script>
