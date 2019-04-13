@@ -1,4 +1,7 @@
 .footer {
+  flex-shrink: 0;
+  height: 80px;
+  box-sizing: border-box;
   color: #4f515d;
   font-size: 0.8rem;
   text-align: center;
