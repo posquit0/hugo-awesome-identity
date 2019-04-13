@@ -1,4 +1,11 @@
-# Awesome Identity Theme for Hugo
+# Awesome Identity
+
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+**Awesome Identity** is a single-page Hugo theme to introduce yourself. Add a portrait, an introduction, serveral links, and you're set.
+
+![Awesome Identity Screenshot](https://raw.githubusercontent.com/posquit0/hugo-awesome-identity/master/images/screenshot.png)
 
 
 ## Getting Started
