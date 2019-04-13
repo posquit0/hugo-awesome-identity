@@ -1,16 +1,21 @@
 .footer {
   flex-shrink: 0;
+  width: 92%;
   height: 80px;
   box-sizing: border-box;
   color: #4f515d;
   font-size: 0.8rem;
   text-align: center;
   text-transform: uppercase;
+  margin: 0 auto;
   padding-top: 18px;
   padding-bottom: 18px;
   border: 0;
   border-top: 1px solid #eee;
 
+  @media only screen and (min-width:1024px) {
+    width: 1024px;
+  }
   p {
     margin-top: 0.4em;
     margin-bottom: 0.4em;
