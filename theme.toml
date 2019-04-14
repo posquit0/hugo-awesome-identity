@@ -8,7 +8,7 @@ tags = [
   "responsive", "mobile", "one-page", "onepage", "light", "landing page", "starter"
 ]
 features = ["analytics", "favicon", "livechat"]
-min_version = "0.54"
+min_version = "0.53"
 
 [author]
   name = "Byungjin Park"
