@@ -1,0 +1,68 @@
+version: 2.1
+
+executors:
+  hugo:
+    parameters:
+      version:
+        type: string
+        default: latest
+    docker:
+    - image: cibuilds/hugo:<< parameters.version >>
+    working_directory: ~/awesome-identity
+
+commands:
+  checkout_with_git_submodules:
+    description: "Checkout project repository with git submodules"
+    steps:
+    - checkout:
+        path: ~/awesome-identity
+    - run: git submodule sync && git submodule update --init
+  build_hugo:
+    description: "Build Static Site with Hugo"
+    steps:
+    - run:
+        command: hugo -v --buildDrafts --themesDir ../../
+        working_directory: ~/awesome-identity/exampleSite
+  test_html:
+    description: "Test Generated HTML files with HTML Proofer"
+    steps:
+    - run:
+        command: htmlproofer public --allow-hash-href --check-html --empty-alt-ignore --disable-external
+        working_directory: ~/awesome-identity/exampleSite
+
+
+jobs:
+  build-hugo-0-55:
+    executor:
+      name: hugo
+      version: "0.55"
+    steps:
+    - checkout_with_git_submodules
+    - build_hugo
+    - test_html
+  build-hugo-0-54:
+    executor:
+      name: hugo
+      version: "0.54"
+    steps:
+    - checkout_with_git_submodules
+    - build_hugo
+    - test_html
+  build-hugo-0-53:
+    executor:
+      name: hugo
+      version: "0.53"
+    steps:
+    - checkout_with_git_submodules
+    - build_hugo
+    - test_html
+
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+    - build-hugo-0-55
+    - build-hugo-0-54
+    - build-hugo-0-53
+
