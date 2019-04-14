@@ -1,0 +1,13 @@
+[build]
+  publish = "exampleSite/public"
+  command = "hugo --gc --minify --source exampleSite"
+
+[context.production.environment]
+  HUGO_VERSION = "0.55.1"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 301
