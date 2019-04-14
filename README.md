@@ -9,6 +9,15 @@
 ![Awesome Identity Screenshot](https://raw.githubusercontent.com/posquit0/hugo-awesome-identity/master/images/screenshot.png)
 
 
+## Features
+
+* Extremely simple to use
+* Responsive layout, supports any screen size
+* Customizable theme colors
+* Supports [Google Analytics](https://marketingplatform.google.com/about/analytics/)
+* Live chat with [Crisp](https://crisp.chat/) integration
+
+
 ## Getting Started
 
 To use this theme you will need to have Hugo installed. If you don't have Hugo installed please follow [Install Hugo](https://gohugo.io/getting-started/installing/).
