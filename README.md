@@ -69,11 +69,11 @@ Now enter [localhost:1313](http://localhost:1313) in the address bar of your bro
 
 ## Configuration
 
-Add these parameters to your `config.toml`:
+Take a look in the `exampleSite/` directory.
 
-```toml
-[params]
-```
+This directory contains an example config file and the content for the demo. It serves as an example setup for your documentation.
+
+Copy the `config.toml` into the root directory of your website. Overwrite the existing config if necessary.
 
 ### Contacts
 
@@ -100,7 +100,7 @@ Currently, Awesome Identity supports: Email, GitHub, Twitter, Facebook, LinkedIn
 ```toml
 ## Footer Configurations
 [params.footer]
-  copyright = "© 2019 Byungjin Park. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
+  copyright = "© 2019 John Smith. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
   poweredBy = true
 ```
 
@@ -140,3 +140,8 @@ Please use the [issue tracker](https://github.com/posquit0/hugo-awesome-identity
 Provided under the terms of the [MIT License](https://github.com/posquit0/hugo-awesome-identity/blob/master/LICENSE).
 
 Copyright © 2019, [Byungjin Park](http://www.posquit0.com).
+
+
+## See Also
+
+* [Awesome CV](https://github.com/posquit0/Awesome-CV) - LaTeX template for your outstanding job application.
