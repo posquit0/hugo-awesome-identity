@@ -1,13 +1,11 @@
 {{ with .Site.Params.profile -}}
 <section class="profile">
-  {{ if .image -}}
-  <div class="image">
+  <div class="portrait">
     <a href="/">
       <div class="spinner"></div>
-      <img alt="{{ .firstname }} {{ .lastname }}" src="{{ .image }}"/>
+      <div class="img" style="background-image: url('{{ .portrait | default "/images/portrait-default.png" | relURL }}')"></div>
     </a>
   </div>
-  {{- end }}
   <h1 class="name">{{ .firstname }} <b>{{ .lastname }}</b></h1>
   {{ with .title -}}
   <h2 class="title">{{ . }}</h2>
