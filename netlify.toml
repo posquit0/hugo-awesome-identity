@@ -1,11 +1,12 @@
 [build]
   publish = "exampleSite/public"
-  command = "hugo --gc --minify --source exampleSite"
+  command = "hugo --gc --minify --source exampleSite --themesDir ../../ -t repo --baseURL $HUGO_BASE_URL"
 
 [context.production.environment]
   HUGO_VERSION = "0.55.1"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
+  HUGO_BASE_URL = "https://awesome-identity.netlify.com"
 
 [[redirects]]
   from = "/*"
