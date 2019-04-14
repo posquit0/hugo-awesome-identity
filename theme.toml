@@ -7,7 +7,7 @@ tags = [
   "aboutme", "awesome", "identity", "minimal",  "minimalist", "simple", "clean",
   "responsive", "mobile", "one-page", "onepage", "light", "landing page", "starter"
 ]
-features = []
+features = ["analytics", "favicon", "livechat"]
 min_version = "0.54"
 
 [author]
