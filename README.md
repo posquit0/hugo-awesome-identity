@@ -66,6 +66,45 @@ Add these parameters to your `config.toml`:
 [params]
 ```
 
+### Contacts
+
+You can put your own contacts such as e-mail address, or social media accounts. The contacts will be linked using icons from [Font Awesome](https://fontawesome.com/).
+
+Currently, Awesome Identity supports: Email, GitHub, Twitter, Facebook, LinkedIn, Instagram, StackOverflow, Keybase, and Medium. Feel free to [create Pull Request](https://github.com/posquit0/hugo-awesome-identity/pulls) if you need other contact type.
+
+```toml
+## Contacts Configurations
+[params.contacts]
+  email = "john.smith@example.com"
+  github = "john.smith"
+  twitter = "john.smith"
+  facebook = "john.smith"
+  linkedin = "john.smith"
+  instagram = "john.smith"
+  stackoverflow = "7919458"
+  keybase = "john.smith"
+  medium = "john.smith"
+```
+
+### Footer
+
+```toml
+## Footer Configurations
+[params.footer]
+  copyright = "© 2019 Byungjin Park. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
+  poweredBy = true
+```
+
+### HTTP meta tags & OpenGraph
+
+### Google Analytics
+
+### Crisp
+
+### Colors
+
+### Internationalization (i18n)
+
 
 ## Update
 
