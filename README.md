@@ -94,6 +94,7 @@ Currently, Awesome Identity supports: Email, GitHub, Twitter, Facebook, LinkedIn
   stackoverflow = "7919458"
   keybase = "john.smith"
   medium = "john.smith"
+  xing = "john.smith"
 ```
 
 ### Footer

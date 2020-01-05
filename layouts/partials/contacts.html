@@ -17,6 +17,10 @@
   <a class="contact" href="https://linkedin.com/in/{{ $id }}">
     <i class="fab fa-linkedin" aria-hidden="true"></i>
   </a>
+    {{- else if (eq $service "xing") }}
+  <a class="contact" href="https://xing.com/profile/{{ $id }}">
+    <i class="fab fa-xing" aria-hidden="true"></i>
+  </a>
     {{- else if (eq $service "instagram") }}
   <a class="contact" href="https://instagram.com/{{ $id }}">
     <i class="fab fa-instagram" aria-hidden="true"></i>
