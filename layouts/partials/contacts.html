@@ -41,6 +41,10 @@
   <a class="contact" href="https://keybase.io/{{ $id }}">
     <i class="fab fa-keybase" aria-hidden="true"></i>
   </a>
+    {{- else if (eq $service "gitlab") }}
+  <a class="contact" href="https://gitlab.com/{{ $id }}">
+    <i class="fab fa-gitlab" aria-hidden="true"></i>
+  </a>
     {{- end }}
   {{- end }}
 </section>
