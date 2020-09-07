@@ -5,7 +5,7 @@
 
 html,
 body {
-  font-family: 'Jura', sans-serif;
+  font-family: Jura, sans-serif;
   font-size: 1rem;
   height: 100%;
 }
@@ -21,7 +21,7 @@ body {
   margin: 0 auto;
   margin-top: 5em;
 
-  @media only screen and (min-width:1024px) {
+  @media only screen and (min-width: 1024px) {
     width: 1024px;
   }
 }
@@ -32,7 +32,7 @@ a {
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 
-  &:visitied,
+  &:visited,
   &:hover,
   &:active {
     text-decoration: none;

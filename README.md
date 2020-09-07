@@ -87,6 +87,7 @@ Currently, Awesome Identity supports: Email, GitHub, Twitter, Facebook, LinkedIn
 [params.contacts]
   email = "john.smith@example.com"
   github = "john.smith"
+  gitlab = "john.smith"
   twitter = "john.smith"
   facebook = "john.smith"
   linkedin = "john.smith"
@@ -141,7 +142,7 @@ Please use the [issue tracker](https://github.com/posquit0/hugo-awesome-identity
 
 Provided under the terms of the [MIT License](https://github.com/posquit0/hugo-awesome-identity/blob/master/LICENSE).
 
-Copyright © 2019, [Byungjin Park](http://www.posquit0.com).
+Copyright © 2019-2020, [Byungjin Park](http://www.posquit0.com).
 
 
 ## See Also

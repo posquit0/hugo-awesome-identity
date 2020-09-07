@@ -1,7 +1,7 @@
 .footer {
   flex-shrink: 0;
   width: 92%;
-  height: 80px;
+  height: auto;
   box-sizing: border-box;
   color: #4f515d;
   font-size: 0.8rem;
@@ -13,7 +13,7 @@
   border: 0;
   border-top: 1px solid #eee;
 
-  @media only screen and (min-width:1024px) {
+  @media only screen and (min-width: 1024px) {
     width: 1024px;
   }
   p {
