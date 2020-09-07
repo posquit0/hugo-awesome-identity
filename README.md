@@ -87,6 +87,7 @@ Currently, Awesome Identity supports: Email, GitHub, Twitter, Facebook, LinkedIn
 [params.contacts]
   email = "john.smith@example.com"
   github = "john.smith"
+  gitlab = "john.smith"
   twitter = "john.smith"
   facebook = "john.smith"
   linkedin = "john.smith"
