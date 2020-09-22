@@ -49,6 +49,10 @@
   <a class="contact" href="https://dev.to/{{ $id }}">
     <i class="fab fa-dev" aria-hidden="true"></i>
   </a>
+    {{- else if (eq $service "hackerrank") }}
+  <a class="contact" href="https://hackerrank.com/{{ $id }}">
+    <i class="fab fa-hackerrank" aria-hidden="true"></i>
+  </a>
     {{- end }}
   {{- end }}
 </section>
