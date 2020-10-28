@@ -53,6 +53,10 @@
   <a class="contact" href="https://hackerrank.com/{{ $id }}">
     <i class="fab fa-hackerrank" aria-hidden="true"></i>
   </a>
+    {{- else if (eq $service "matrix") }}
+  <a class="contact" href="https://matrix.to/#/{{ $id }}">
+    <i class="fa fa-matrix-org" aria-hidden="true"></i>
+  </a>
     {{- end }}
   {{- end }}
 </section>
