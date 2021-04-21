@@ -3,7 +3,7 @@
   width: 92%;
   height: auto;
   box-sizing: border-box;
-  color: #4f515d;
+  color: $color-neutral-grey;
   font-size: 0.8rem;
   text-align: center;
   text-transform: uppercase;
@@ -11,7 +11,7 @@
   padding-top: 18px;
   padding-bottom: 18px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid $color-light-grey;
 
   @media only screen and (min-width: 1024px) {
     width: 1024px;
@@ -21,6 +21,6 @@
     margin-bottom: 0.4em;
   }
   a:hover {
-    color: #4f515d;
+    color: $color-neutral-grey;
   }
 }
