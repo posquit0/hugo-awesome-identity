@@ -26,7 +26,7 @@ To use this theme you will need to have Hugo installed. If you don't have Hugo i
 ### Create a new Hugo site
 
 ```bash
-$ hugo new site my-identity
+hugo new site my-identity
 ```
 
 ### Install the theme
@@ -34,13 +34,13 @@ $ hugo new site my-identity
 If your site is under version control using git, the easiest way to install this theme is to add it as a submodule. Inside the directory of your Hugo site, run the following command.
 
 ```bash
-$ git submodule add https://github.com/posquit0/hugo-awesome-identity themes/awesome-identity
+git submodule add https://github.com/posquit0/hugo-awesome-identity themes/awesome-identity
 ```
 
 Alternatively, you can clone the theme into your project.
 
 ```bash
-$ git clone https://github.com/posquit0/hugo-awesome-identity themes/awesome-identity
+git clone https://github.com/posquit0/hugo-awesome-identity themes/awesome-identity
 ```
 
 ### Configure Hugo
@@ -54,7 +54,7 @@ theme = "awesome-identity"
 Alternatively, you can tell Hugo to use the theme with the `-t` option.
 
 ```bash
-$ hugo server -t awesome-identity
+hugo server -t awesome-identity
 ```
 
 ### Run server for development
@@ -62,7 +62,7 @@ $ hugo server -t awesome-identity
 After installing the theme for the first time, generate the Hugo site.
 
 ```bash
-$ hugo server
+hugo server
 ```
 
 Now enter [localhost:1313](http://localhost:1313) in the address bar of your browser.
@@ -123,7 +123,7 @@ Currently, Awesome Identity supports: Email, GitHub, Twitter, Facebook, LinkedIn
 If you have installed the theme as a git submodule, you can update the theme by issuing the following command inside your project directory.
 
 ```bash
-$ git submodule update --remote --rebase
+git submodule update --remote --rebase
 ```
 
 If you have cloned the theme, you can run `git pull` inside the theme directory.
