@@ -1,7 +1,7 @@
 {{ with .Site.Params.actions -}}
 <section class="actions">
   {{ range . }}
-  <a class="action" href="{{ .url }}">{{ .name }}</a>
+  <a class="action" href="{{ .url }}" target="_blank">{{ .name }}</a>
   {{ end }}
 </section>
 {{- end }}
