@@ -2,59 +2,59 @@
 <section class="contacts">
   {{- range $service, $id := . -}}
     {{- if (eq $service "github") }}
-  <a class="contact" href="https://github.com/{{ $id }}">
+  <a class="contact" href="https://github.com/{{ $id }}" target="_blank">
     <i class="fab fa-github" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "twitter") }}
-  <a class="contact" href="https://twitter.com/{{ $id }}">
+  <a class="contact" href="https://twitter.com/{{ $id }}" target="_blank">
     <i class="fab fa-twitter" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "facebook") }}
-  <a class="contact" href="https://facebook.com/{{ $id }}">
+  <a class="contact" href="https://facebook.com/{{ $id }}" target="_blank">
     <i class="fab fa-facebook" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "linkedin") }}
-  <a class="contact" href="https://linkedin.com/in/{{ $id }}">
+  <a class="contact" href="https://linkedin.com/in/{{ $id }}" target="_blank">
     <i class="fab fa-linkedin" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "xing") }}
-  <a class="contact" href="https://xing.com/profile/{{ $id }}">
+  <a class="contact" href="https://xing.com/profile/{{ $id }}" target="_blank">
     <i class="fab fa-xing" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "instagram") }}
-  <a class="contact" href="https://instagram.com/{{ $id }}">
+  <a class="contact" href="https://instagram.com/{{ $id }}" target="_blank">
     <i class="fab fa-instagram" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "stackoverflow") }}
-  <a class="contact" href="https://stackoverflow.com/users/{{ $id }}">
+  <a class="contact" href="https://stackoverflow.com/users/{{ $id }}" target="_blank">
     <i class="fab fa-stack-overflow" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "medium") }}
-  <a class="contact" href="https://medium.com/{{ $id }}">
+  <a class="contact" href="https://medium.com/{{ $id }}" target="_blank">
     <i class="fab fa-medium" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "email") }}
-  <a class="contact" href="mailto:{{ $id }}">
+  <a class="contact" href="mailto:{{ $id }}" target="_blank">
     <i class="fas fa-envelope" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "keybase") }}
-  <a class="contact" href="https://keybase.io/{{ $id }}">
+  <a class="contact" href="https://keybase.io/{{ $id }}" target="_blank">
     <i class="fab fa-keybase" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "gitlab") }}
-  <a class="contact" href="https://gitlab.com/{{ $id }}">
+  <a class="contact" href="https://gitlab.com/{{ $id }}" target="_blank">
     <i class="fab fa-gitlab" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "devto") }}
-  <a class="contact" href="https://dev.to/{{ $id }}">
+  <a class="contact" href="https://dev.to/{{ $id }}" target="_blank">
     <i class="fab fa-dev" aria-hidden="true"></i>
   </a>
     {{- else if (eq $service "hackerrank") }}
-  <a class="contact" href="https://hackerrank.com/{{ $id }}">
+  <a class="contact" href="https://hackerrank.com/{{ $id }}" target="_blank">
     <i class="fab fa-hackerrank" aria-hidden="true"></i>
   </a>
   {{- else if (eq $service "bitbucket") }}
-  <a class="contact" href="https://bitbucket.org/{{ $id }}">
+  <a class="contact" href="https://bitbucket.org/{{ $id }}" target="_blank">
     <i class="fab fa-bitbucket" aria-hidden="true"></i>
   </a>
     {{- end }}

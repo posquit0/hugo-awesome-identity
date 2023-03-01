@@ -4,7 +4,7 @@
   <p class="copyright">{{ . | markdownify }}</p>
   {{- end }}
   {{ if or ( not ( isset . "poweredby" ) ) ( .poweredby ) -}}
-  <p class="powered-by">Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/posquit0/hugo-awesome-identity">Awesome Identity</a>.</p>
+  <p class="powered-by">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://github.com/posquit0/hugo-awesome-identity" target="_blank">Awesome Identity</a>.</p>
   {{- end }}
 </footer>
 {{- end }}
