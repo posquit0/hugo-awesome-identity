@@ -1,1 +1,47 @@
 $color-accent: rgb(182, 38, 44);
+
+@mixin light-colors {
+  color-scheme: light;
+  --color-bg: #fff;
+  --color-text: #000;
+  --color-text-muted: #666;
+  --color-accent: #{$color-accent};
+  --color-accent-light: #{lighten($color-accent, 10%)};
+  --color-accent-shadow: #{rgba($color-accent, 0.15)};
+  --color-contact-bg: #f9f9fb;
+  --color-contact-fg: #535358;
+  --color-footer-fg: #4f515d;
+  --color-border: #eee;
+  --color-spinner: #3d3d3d;
+}
+
+@mixin dark-colors {
+  color-scheme: dark;
+  --color-bg: #121214;
+  --color-text: #e6e6e6;
+  --color-text-muted: #9a9a9a;
+  --color-accent: #{lighten($color-accent, 12%)};
+  --color-accent-light: #{lighten($color-accent, 22%)};
+  --color-accent-shadow: #{rgba(lighten($color-accent, 12%), 0.2)};
+  --color-contact-bg: #232328;
+  --color-contact-fg: #b6b6bc;
+  --color-footer-fg: #a0a2ad;
+  --color-border: #2c2c2e;
+  --color-spinner: #d0d0d0;
+}
+
+:root {
+  @include light-colors;
+}
+
+// Forced via `appearance = "dark"` in site params.
+:root[data-color-scheme="dark"] {
+  @include dark-colors;
+}
+
+// Follow the system preference unless `appearance = "light"` is set.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-color-scheme="light"]) {
+    @include dark-colors;
+  }
+}

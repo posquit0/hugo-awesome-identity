@@ -12,7 +12,7 @@
     line-height: 2em;
     text-transform: uppercase;
     font-weight: 700;
-    color: rgba(0, 0, 0, 1);
+    color: var(--color-text);
 
     &:after {
       content: "";
@@ -23,7 +23,7 @@
       height: 2px;
       left: 50%;
       bottom: -0.3em;
-      background: lighten($color-accent, 10%);
+      background: var(--color-accent-light);
       transform: translateX(-50%);
     }
     &:hover:after {
@@ -31,6 +31,6 @@
     }
   }
   .action:hover {
-    color: lighten(black, 40%);
+    color: var(--color-text-muted);
   }
 }

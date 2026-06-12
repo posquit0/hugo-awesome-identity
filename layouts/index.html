@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+{{- $appearance := .Site.Params.appearance | default "auto" }}
+<html{{ if in (slice "light" "dark") $appearance }} data-color-scheme="{{ $appearance }}"{{ end }}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

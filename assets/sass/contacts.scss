@@ -10,16 +10,16 @@
     line-height: 2.2em;
     margin-left: 0.1em;
     margin-right: 0.1em;
-    background: #f9f9fb;
+    background: var(--color-contact-bg);
     border-radius: 100%;
-    color: #535358;
+    color: var(--color-contact-fg);
     text-align: center;
     transition: all 0.3s ease-in-out;
   }
   .contact:hover {
-    background: $color-accent;
+    background: var(--color-accent);
     color: #fff;
-    box-shadow: 0 0 1px 7px rgba($color-accent, 0.15);
+    box-shadow: 0 0 1px 7px var(--color-accent-shadow);
     position: relative;
   }
 }
