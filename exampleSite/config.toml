@@ -3,6 +3,13 @@ baseURL = "https://example.com"
 title = "Awesome Identity for Hugo"
 
 
+## HTTP meta tags & OpenGraph Configurations
+[params.meta]
+  description = "Awesome Identity is a single-page Hugo theme to introduce yourself."
+  keywords = "profile, about me, identity, hugo, theme"
+  images = ["/images/portrait-default.png"]
+
+
 ## Profile Configurations
 [params.profile]
   portrait = "/images/portrait-default.png"
@@ -17,7 +24,34 @@ title = "Awesome Identity for Hugo"
   """
 
 
+## Contacts Configurations
+[params.contacts]
+  email = "john.smith@example.com"
+  github = "john.smith"
+  gitlab = "john.smith"
+  twitter = "john.smith"
+  linkedin = "john.smith"
+  instagram = "john.smith"
+  stackoverflow = "7919458"
+  medium = "john.smith"
+  devto = "john.smith"
+
+
+## Actions Configurations
+[[params.actions]]
+  name = "Resume"
+  url = "https://example.com/resume.pdf"
+
+[[params.actions]]
+  name = "Blog"
+  url = "https://blog.example.com"
+
+[[params.actions]]
+  name = "Portfolio"
+  url = "https://example.com/portfolio"
+
+
 ## Footer Configurations
 [params.footer]
-  copyright = "© 2019-2020 Byungjin Park. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
+  copyright = "© 2019-2026 Byungjin Park. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)."
   poweredBy = true
