@@ -10,18 +10,12 @@
       width: 10rem;
       height: 10rem;
       border: 0.5em solid #3d3d3d;
-      border-right-color: rgb(182, 38, 44);
-      border-bottom-color: rgb(182, 38, 44);
+      border-right-color: $color-accent;
+      border-bottom-color: $color-accent;
       border-radius: 50%;
-      -webkit-transition: transform 0.8s ease-in-out;
-      -moz-transition: transform 0.8s ease-in-out;
       transition: transform 0.8s ease-in-out;
     }
     &:hover .spinner {
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
       transform: rotate(180deg);
     }
     .img {
@@ -34,8 +28,6 @@
       background-position: center;
       background-size: cover;
       border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
     }
   }
   .name {
@@ -51,7 +43,7 @@
   .title {
     font-size: 1rem;
     text-transform: uppercase;
-    color: rgb(182, 38, 44);
+    color: $color-accent;
     margin: 0.8em auto;
   }
   .bio {

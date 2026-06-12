@@ -27,9 +27,8 @@ body {
 }
 
 a {
-  color: rgb(182, 38, 44);
+  color: $color-accent;
   text-decoration: none;
-  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 
   &:visited,
@@ -40,11 +39,6 @@ a {
 }
 
 ::selection {
-  background-color: rgb(182, 38, 44);
-  color: white;
-}
-
-::-moz-selection {
-  background-color: rgb(182, 38, 44);
+  background-color: $color-accent;
   color: white;
 }
