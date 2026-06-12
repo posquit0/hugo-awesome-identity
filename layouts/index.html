@@ -3,6 +3,15 @@
 <html{{ if in (slice "light" "dark") $appearance }} data-color-scheme="{{ $appearance }}"{{ end }}>
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Restore the visitor's color-scheme choice before first paint.
+      try {
+        var scheme = localStorage.getItem('color-scheme');
+        if (scheme === 'light' || scheme === 'dark') {
+          document.documentElement.setAttribute('data-color-scheme', scheme);
+        }
+      } catch (e) {}
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -33,6 +42,7 @@
     <link rel="manifest" href="/manifest.json">
   </head>
   <body>
+{{ partial "scheme-toggle.html" . }}
     <div class="wrap">
 {{ partial "profile.html" . }}
 {{ partial "contacts.html" . }}
