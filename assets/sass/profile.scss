@@ -9,9 +9,9 @@
     .spinner {
       width: 10rem;
       height: 10rem;
-      border: 0.5em solid #3d3d3d;
-      border-right-color: $color-accent;
-      border-bottom-color: $color-accent;
+      border: 0.5em solid var(--color-spinner);
+      border-right-color: var(--color-accent);
+      border-bottom-color: var(--color-accent);
       border-radius: 50%;
       transition: transform 0.8s ease-in-out;
     }
@@ -43,7 +43,7 @@
   .title {
     font-size: 1rem;
     text-transform: uppercase;
-    color: $color-accent;
+    color: var(--color-accent);
     margin: 0.8em auto;
   }
   .bio {

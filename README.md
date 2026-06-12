@@ -115,6 +115,16 @@ Currently, Awesome Identity supports: Email, GitHub, Twitter, Facebook, LinkedIn
 
 ### Colors
 
+### Dark Mode
+
+The theme follows the visitor's system color scheme (`prefers-color-scheme`) automatically. To force a specific scheme, set the `appearance` parameter in your site config:
+
+```toml
+[params]
+  # One of "auto" (default), "light", or "dark".
+  appearance = "auto"
+```
+
 ### Internationalization (i18n)
 
 
