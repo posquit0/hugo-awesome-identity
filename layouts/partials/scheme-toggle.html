@@ -1,0 +1,33 @@
+{{ if ne .Site.Params.schemeToggle false -}}
+<button id="scheme-toggle" class="scheme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
+  <i class="fas fa-sun" aria-hidden="true"></i>
+  <i class="fas fa-moon" aria-hidden="true"></i>
+  <span class="thumb"></span>
+</button>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var toggle = document.getElementById('scheme-toggle');
+    var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function current() {
+      var forced = root.getAttribute('data-color-scheme');
+      return forced === 'light' || forced === 'dark'
+        ? forced
+        : (media.matches ? 'dark' : 'light');
+    }
+    function update() {
+      toggle.setAttribute('aria-checked', current() === 'dark');
+    }
+
+    toggle.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-color-scheme', next);
+      try { localStorage.setItem('color-scheme', next); } catch (e) {}
+      update();
+    });
+    media.addEventListener('change', update);
+    update();
+  })();
+</script>
+{{- end }}

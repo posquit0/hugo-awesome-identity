@@ -118,12 +118,16 @@ Currently, Awesome Identity supports: Email, GitHub, GitLab, Bitbucket, Twitter,
 
 ### Dark Mode
 
-The theme follows the visitor's system color scheme (`prefers-color-scheme`) automatically. To force a specific scheme, set the `appearance` parameter in your site config:
+The theme follows the visitor's system color scheme (`prefers-color-scheme`) automatically, and shows an on/off switch in the top-right corner so visitors can flip the scheme themselves. The visitor's choice is stored in `localStorage` and takes precedence on later visits.
+
+To change the default scheme or hide the switch, set these parameters in your site config:
 
 ```toml
 [params]
-  # One of "auto" (default), "light", or "dark".
+  # Default scheme: one of "auto" (default), "light", or "dark".
   appearance = "auto"
+  # Set to false to hide the toggle switch.
+  schemeToggle = true
 ```
 
 ### Internationalization (i18n)
