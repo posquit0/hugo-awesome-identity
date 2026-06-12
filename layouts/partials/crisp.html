@@ -1,4 +1,4 @@
-{{- $ga := .Site.GoogleAnalytics -}}
+{{- $ga := site.Config.Services.GoogleAnalytics.ID -}}
 {{ with .Site.Params.crisp -}}
 {{ if .websiteid -}}
 <script type="text/javascript">
@@ -22,19 +22,19 @@
   {{- end }}
   {{ if $ga -}}
   $crisp.push(["on", "chat:initiated", function() {
-    ga('send', 'event', 'Chat', 'Chat Initiated');
+    gtag('event', 'Chat Initiated', { 'event_category': 'Chat' });
   }]);
   $crisp.push(["on", "chat:opened", function() {
-    ga('send', 'event', 'Chat', 'Chat Opened');
+    gtag('event', 'Chat Opened', { 'event_category': 'Chat' });
   }]);
   $crisp.push(["on", "chat:closed", function() {
-    ga('send', 'event', 'Chat', 'Chat Closed');
+    gtag('event', 'Chat Closed', { 'event_category': 'Chat' });
   }]);
   $crisp.push(["on", "message:sent", function() {
-    ga('send', 'event', 'Chat', 'Message Sent');
+    gtag('event', 'Message Sent', { 'event_category': 'Chat' });
   }]);
   $crisp.push(["on", "message:received", function() {
-    ga('send', 'event', 'Chat', 'Message Received');
+    gtag('event', 'Message Received', { 'event_category': 'Chat' });
   }]);
   {{- end }}
 </script>

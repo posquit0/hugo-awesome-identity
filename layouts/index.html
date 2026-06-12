@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura:400,700">
 
 {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
-{{ $style := resources.Get "sass/main.scss" | toCSS $options | fingerprint }}
+{{ $style := resources.Get "sass/main.scss" | css.Sass $options | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     <!-- <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"> -->
 
@@ -37,7 +37,7 @@
 {{ partial "actions.html" . }}
     </div>
 {{ partial "footer.html" . }}
-{{ template "_internal/google_analytics_async.html" . }}
+{{ template "_internal/google_analytics.html" . }}
 {{ partial "crisp.html" . }}
   </body>
 </html>
