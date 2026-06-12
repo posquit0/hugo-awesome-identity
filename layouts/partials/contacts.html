@@ -1,6 +1,7 @@
 {{ with .Site.Params.contacts -}}
 {{- $services := dict
   "bitbucket" (dict "url" "https://bitbucket.org/%s" "icon" "fab fa-bitbucket")
+  "credly" (dict "url" "https://www.credly.com/users/%s" "icon" "fas fa-award")
   "devto" (dict "url" "https://dev.to/%s" "icon" "fab fa-dev")
   "email" (dict "url" "mailto:%s" "icon" "fas fa-envelope")
   "facebook" (dict "url" "https://facebook.com/%s" "icon" "fab fa-facebook")
