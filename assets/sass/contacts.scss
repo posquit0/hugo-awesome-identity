@@ -8,8 +8,7 @@
     width: 2.2em;
     height: 2.2em;
     line-height: 2.2em;
-    margin-left: 0.1em;
-    margin-right: 0.1em;
+    margin: 0.25em;
     background: var(--color-contact-bg);
     border-radius: 100%;
     color: var(--color-contact-fg);
@@ -20,6 +19,5 @@
     background: var(--color-accent);
     color: #fff;
     box-shadow: 0 0 1px 7px var(--color-accent-shadow);
-    position: relative;
   }
 }
