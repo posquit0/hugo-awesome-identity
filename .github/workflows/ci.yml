@@ -15,29 +15,29 @@ jobs:
         # Oldest supported (theme.toml min_version) and latest release.
         hugo-version: ["0.128.0", "0.163.1"]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: true
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        submodules: true
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: ${{ matrix.hugo-version }}
-          extended: true
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: ${{ matrix.hugo-version }}
+        extended: true
 
-      - name: Build example site
-        working-directory: exampleSite
-        run: hugo --buildDrafts --themesDir ../../ -t ${{ github.event.repository.name }}
+    - name: Build example site
+      working-directory: exampleSite
+      run: hugo --buildDrafts --themesDir ../../ -t ${{ github.event.repository.name }}
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.3"
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: "3.3"
 
-      - name: Install HTML Proofer
-        run: gem install html-proofer
+    - name: Install HTML Proofer
+      run: gem install html-proofer
 
-      - name: Test generated HTML
-        working-directory: exampleSite
-        run: htmlproofer public --allow-hash-href --ignore-empty-alt --disable-external
+    - name: Test generated HTML
+      working-directory: exampleSite
+      run: htmlproofer public --allow-hash-href --ignore-empty-alt --disable-external
